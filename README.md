@@ -1,4 +1,4 @@
-# Tender Hack.Msk
+# Tender Hack.Msk project
 
 > Serious project developed by a serious team 
 
