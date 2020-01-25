@@ -9,7 +9,7 @@ class Request(Model):
     quantity = IntegerField()
     waiting_period = DateTimeField()
     delivery_date = DateTimeField()
-    notes = TextField()
+    notes = TextField(null=True, default='')
 
     @staticmethod
     def get_all_categories():
