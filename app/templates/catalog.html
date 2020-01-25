@@ -1,9 +1,66 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block head %}
+<title>Каталог заявок | PPnP</title>
+{% endblock head %} {% block content %}
+<section class="content wrapper">
+    <h1 class="section-header">Заявки</h1>
+    <div class="requests">
+        <div class="articles-gallery">
+            <article class="request">
+                <div class="request__info">
+                    <h3>Бумага Svetocopy</h3>
+                    <p>Срок поставки: осталось 5 дней</p>
+                    <p>Дата поставки: 24 декабря</p>
+                    <a href="//" class="body-link">Подробнее</a>
+                </div>
+                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
+            </article>
+            <article class="request">
+                <div class="request__info">
+                    <h3>Бумага Svetocopy</h3>
+                    <p>Срок поставки: осталось 5 дней</p>
+                    <p>Дата поставки: 24 декабря</p>
+                    <a href="//" class="body-link">Подробнее</a>
+                </div>
+                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
+            </article>
+            <article class="request">
+                <div class="request__info">
+                    <h3>Бумага Svetocopy</h3>
+                    <p>Срок поставки: осталось 5 дней</p>
+                    <p>Дата поставки: 24 декабря</p>
+                    <a href="//" class="body-link">Подробнее</a>
+                </div>
+                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
+            </article>
+            <article class="request">
+                <div class="request__info">
+                    <h3>Бумага Svetocopy</h3>
+                    <p>Срок поставки: осталось 5 дней</p>
+                    <p>Дата поставки: 24 декабря</p>
+                    <a href="//" class="body-link">Подробнее</a>
+                </div>
+                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
+            </article>
+        </div>
+        <div class="filters">
+            <h3 class="filters__header">Фильтры</h3>
+            <div class="filters__filter">
+                <p>Категория</p>
+                <select>
+                    <option>Пункт 1</option>
+                    <option>Пункт 2</option>
+                  </select>
+            </div>
+            <div class="filters__filter">
+                <p>Срок ожидания</p>
+                <input type="date">
+            </div>
+            <div class="filters__filter">
+                <p>Срок доставки</p>
+                <input type="date">
+            </div>
+        </div>
+    </div>
+</section>
 
-{% block head %}
-    <title>Каталог заявок | PPnP</title>
-{% endblock head %}
-
-{% block content %}
-    <h1>Заявки</h1>
 {% endblock content %}
