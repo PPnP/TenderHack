@@ -15,13 +15,13 @@ CustomerRequest.create_table()
 
 r1 = Request.create(category='Канцелярия', goods='Шариковая ручка', quantity=10,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=5),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=8))
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=8), notes='')
 r2 = Request.create(category='Продукты', goods='Капуста белокачанная', quantity=4,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=3),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=7))
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
 r3 = Request.create(category='Офис', goods='Бумага SvetoCopy', picture='svetocopy.jpg', quantity=7,
-                    waiting_period=datetime.date.today() + datetime.timedelta(days=14),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=20))
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=4),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=20), notes='')
 
 c1 = Customer.create(name='Stepan Denisov', location='15-я Парковая, 16к3')
 c2 = Customer.create(name='Pavel Krylov', location='Широкая, 8')
