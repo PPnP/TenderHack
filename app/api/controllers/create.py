@@ -1,4 +1,4 @@
-from flask import render_template, redirect
+from flask import redirect
 from flask_wtf import FlaskForm
 
 from app.api.controllers.base import BaseController
@@ -22,4 +22,4 @@ class CreateRequestController(BaseController):
         r = Request.create(category=form.category, goods=form.goods, quantity=form.quantity,
                            waiting_period=form.waiting_period, delivery_date=form.delivery_date)
         CustomerRequest.create(customer=c, request=r)
-        return render_template('success.html')
+        return redirect('/success')
