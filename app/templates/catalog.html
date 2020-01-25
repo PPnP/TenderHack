@@ -24,8 +24,9 @@
             <div class="filters__filter">
                 <p>Категория</p>
                 <select>
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
+                    {% for category in categories %}
+                    <option>{{ category[1] }}</option>
+                    {% endfor %}
                   </select>
             </div>
             <div class="filters__filter">
