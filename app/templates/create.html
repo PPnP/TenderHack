@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Создание заявки | PPnP</title>
+{% endblock head %}
+
+{% block content %}
+    {{ form.category }}
+    {{ form.goods }}
+    {{ form.quantity }}
+    {{ form.waiting_period }}
+    {{ form.delivery_date }}
+    {{ form.submit }}
+{% endblock content %}
