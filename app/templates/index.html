@@ -1,13 +1,9 @@
 {% extends "base.html" %} {% block head %} {% endblock head %} {% block content %}
 <img src="{{ url_for('static', filename='images/portal_1.png') }}" class="fake_portal">
-<img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake_portal" usemap="#buttons">
+<img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake_portal">
 <img src="{{ url_for('static', filename='images/portal_3.png') }}" class="fake_portal">
-<map name="buttons">
-    <area shape="rect" coords="1022,212,1170,270" href="/catalog">
-    <area shape="rect" coords="1022,70,1170,130" href="/catalog">
-  </map>
 <script>
     document.addEventListener("click", (e) => {
-        console.log(e)
+        location.href = "/catalog"
     })
 </script>{% endblock content %}
