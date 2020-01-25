@@ -325,3 +325,23 @@
     .filters__header {
         color: var(--blue)
     }
+    
+    .create-request {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    
+    .create-request__column {
+        display: grid;
+        grid-gap: 1rem
+    }
+    
+    .create-request__column p {
+        margin-bottom: .5rem
+    }
+    
+    .create-request__column select,
+    .create-request__column input {
+        width: 100%
+    }

@@ -1,14 +1,36 @@
-{% extends "base.html" %}
-
-{% block head %}
-    <title>Создание заявки | PPnP</title>
-{% endblock head %}
-
-{% block content %}
-    {{ form.category }}
-    {{ form.goods }}
-    {{ form.quantity }}
-    {{ form.waiting_period }}
-    {{ form.delivery_date }}
-    {{ form.submit }}
-{% endblock content %}
+{% extends "base.html" %} {% block head %}
+<title>Создание заявки | PPnP</title>
+{% endblock head %} {% block content %}
+<section class="content wrapper">
+    <h1 class="section-header">Создать заявку</h1>
+    <div class="create-request">
+        <div class="create-request__column">
+            <div>
+                <p>1. Категория товара</p>
+                {{ form.category }}
+            </div>
+            <div>
+                <p>2. Название товара</p>
+                {{ form.category }}
+            </div>
+            <div>
+                <p>3. Количество</p>
+                {{ form.category }}
+            </div>
+        </div>
+        <div class="create-request__column">
+            <div>
+                <p>4. Срок ожидания</p>
+                {{ form.category }}
+            </div>
+            <div>
+                <p>5. Срок доставки</p>
+                {{ form.category }}
+            </div>
+            <div>
+                <p>6. Адрес доставки</p>
+                {{ form.category }}
+            </div>
+        </div>
+    </div>
+    {{ form.goods }} {{ form.quantity }} {{ form.waiting_period }} {{ form.delivery_date }} {{ form.submit }} {% endblock content %}
