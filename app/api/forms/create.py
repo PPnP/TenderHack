@@ -13,4 +13,5 @@ class CreateRequestForm(FlaskForm):
     waiting_period = DateTimeField(label='waiting_period', validators=[DataRequired(message='This is a required field')])
     delivery_date = DateTimeField(label='delivery_date', validators=[DataRequired(message='This is a required field')])
     address = StringField(label='address', validators=[DataRequired(message='This is a required field')])
+    notes = StringField(label='notes', validators=[DataRequired(message='This is a required field')])
     submit = SubmitField('Create')
