@@ -5,42 +5,19 @@
     <h1 class="section-header">Заявки</h1>
     <div class="requests">
         <div class="articles-gallery">
+            {% for request in requests %}
+
             <article class="request">
                 <div class="request__info">
-                    <h3>Бумага Svetocopy</h3>
-                    <p>Срок поставки: осталось 5 дней</p>
-                    <p>Дата поставки: 24 декабря</p>
-                    <a href="//" class="body-link">Подробнее</a>
+                    <h3>{{ request.goods }}</h3>
+                    <p>Срок ожидания: <time datetime="{{ request.waiting_period }}">{{ request.waiting_period }}</time> д.</p>
+                    <p>Дата доставки: {{ request.delivery_date.day }} {{ request.delivery_date.month }}</p>
+                    <a href="/details/{{ request.id }}" class="body-link">Подробнее</a>
                 </div>
-                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
+                <img class="request__preview" src="{{ url_for('static', filename='images/' + request.picture) }}">
             </article>
-            <article class="request">
-                <div class="request__info">
-                    <h3>Бумага Svetocopy</h3>
-                    <p>Срок поставки: осталось 5 дней</p>
-                    <p>Дата поставки: 24 декабря</p>
-                    <a href="//" class="body-link">Подробнее</a>
-                </div>
-                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
-            </article>
-            <article class="request">
-                <div class="request__info">
-                    <h3>Бумага Svetocopy</h3>
-                    <p>Срок поставки: осталось 5 дней</p>
-                    <p>Дата поставки: 24 декабря</p>
-                    <a href="//" class="body-link">Подробнее</a>
-                </div>
-                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
-            </article>
-            <article class="request">
-                <div class="request__info">
-                    <h3>Бумага Svetocopy</h3>
-                    <p>Срок поставки: осталось 5 дней</p>
-                    <p>Дата поставки: 24 декабря</p>
-                    <a href="//" class="body-link">Подробнее</a>
-                </div>
-                <img class="request__preview" src="{{ url_for('static', filename='images/svetocopy.jpg') }}">
-            </article>
+
+            {% endfor %}
         </div>
         <div class="filters">
             <h3 class="filters__header">Фильтры</h3>
