@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block head %} {% endblock head %} {% block content %}
-<img src="{{ url_for('static', filename='images/portal_1.png') }}" class="fake_portal">
-<img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake_portal">
-<img src="{{ url_for('static', filename='images/portal_3.png') }}" class="fake_portal">
+<img src="{{ url_for('static', filename='images/portal_1.png') }}" class="fake-portal">
+<img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake-portal">
+<img src="{{ url_for('static', filename='images/portal_3.png') }}" class="fake-portal">
 <script>
     document.addEventListener("click", (e) => {
         location.href = "/catalog"

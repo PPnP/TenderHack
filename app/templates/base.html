@@ -11,7 +11,23 @@
 </head>
 
 <body>
-    {% block content %}{% endblock content %}
+    {% if url_for(request.endpoint) != "/" %}
+    <div class="top-menu">
+        <div class="top-menu__inner wrapper">
+            <a class="top-menu__logo" href="/">
+                <img src="{{ url_for('static', filename='images/Logo.png') }}">
+            </a>
+            <div class="search">
+                <input type="text" class="search__entry no-right-border">
+                <input type="submit" class="search__submit button no-left-border" value="поиск">
+            </div>
+            <a class="top-menu__create-request" href="/create">
+            + создать заявку
+        </a>
+            <button class="button button_catalog"><img src="{{ url_for('static', filename='images/burger.svg') }}">каталог</button>
+        </div>
+    </div>
+    {% endif %} {% block content %}{% endblock content %}
 </body>
 
 </html>
