@@ -3,7 +3,7 @@ from app.api.models import *
 
 class Customer(Model):
     id = AutoField()
-    name = TextField(null=True, default=None)
+    name = TextField(default='Arkasha')
     location = TextField()
 
     class Meta:

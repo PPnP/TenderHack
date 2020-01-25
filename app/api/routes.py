@@ -11,3 +11,6 @@ api.add_url_rule('/catalog', view_func=CatalogController.as_view('Catalog'))
 
 from app.api.controllers.create import CreateRequestController
 api.add_url_rule('/create', view_func=CreateRequestController.as_view('CreateRequest'))
+
+from app.api.controllers.details import DetailsController
+api.add_url_rule('/details/<string:id>', view_func=DetailsController.as_view('Details'))
