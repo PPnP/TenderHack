@@ -19,18 +19,29 @@ r1 = Request.create(category='Канцелярия', goods='Степлер', pic
 r2 = Request.create(category='Офисные принадлежности', goods='Бумага SvetoCopy', picture='svetocopy.jpg', quantity=7,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=4),
                     delivery_date=datetime.date.today() + datetime.timedelta(days=20), notes='')
-r3 = Request.create(category='Офисные принадлежности', goods='Тетрадка 48 листов', picture='copybook.jpg', quantity=4,
+r3 = Request.create(category='Быт', goods='Кофемашина', picture='coffee.jpg', quantity=1,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=3),
                     delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
 r4 = Request.create(category='Обувь', goods='Yeezy Boost', picture='yeezy.webp', quantity=2,
-                    waiting_period=datetime.date.today() + datetime.timedelta(days=4),
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5), notes='')
+r5 = Request.create(category='Бытовая техника', goods='Шуруповёрт', picture='screwdriver.jpg', quantity=4,
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=3),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
+r6 = Request.create(category='Развлечения', goods='Кубик Рубика', picture='cube.jpg', quantity=4,
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=5),
                     delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
 
 c1 = Customer.create(name='Stepan Denisov', location='15-я Парковая, 16к3')
 c2 = Customer.create(name='Pavel Krylov', location='Широкая, 8')
 c3 = Customer.create(name='Leonid Kravtsov', location='Первомайская, 121')
-c4 = Customer.create(name='Matvey Kottsov', location='Первомайская, 121')
+c4 = Customer.create(name='Matvey Kottsov', location='Покровский бульвар, 11')
+c5 = Customer.create(name='Ivan Ivanov', location='Академика Скрябина, 26к1')
+c6 = Customer.create(name='Petr Parker', location='Большая грузинская, 12с2')
 
 CustomerRequest.create(customer=c1, request=r1)
 CustomerRequest.create(customer=c2, request=r2)
 CustomerRequest.create(customer=c3, request=r3)
+CustomerRequest.create(customer=c4, request=r4)
+CustomerRequest.create(customer=c5, request=r5)
+CustomerRequest.create(customer=c6, request=r6)
