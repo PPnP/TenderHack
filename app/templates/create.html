@@ -3,7 +3,7 @@
 {% endblock head %} {% block content %}
 <section class="content wrapper">
     <h1 class="section-header">Создать заявку</h1>
-    <div class="create-request">
+    <form class="create-request" method="post" action="{{ action}}">
         <div class="create-request__column">
             <div>
                 <p>1. Категория товара</p>
@@ -11,26 +11,25 @@
             </div>
             <div>
                 <p>2. Название товара</p>
-                {{ form.category }}
+                {{ form.goods }}
             </div>
             <div>
                 <p>3. Количество</p>
-                {{ form.category }}
+                {{ form.quantity }}
             </div>
         </div>
         <div class="create-request__column">
             <div>
                 <p>4. Срок ожидания</p>
-                {{ form.category }}
+                {{ form.waiting_period(type="date") }}
             </div>
             <div>
                 <p>5. Срок доставки</p>
-                {{ form.category }}
+                {{ form.delivery_date(type="date") }}
             </div>
             <div>
                 <p>6. Адрес доставки</p>
-                {{ form.category }}
+                {{ form.address }}
             </div>
         </div>
-    </div>
-    {{ form.goods }} {{ form.quantity }} {{ form.waiting_period }} {{ form.delivery_date }} {{ form.submit }} {% endblock content %}
+        {{ form.notes }} {{ form.submit }}</form> {% endblock content %}
