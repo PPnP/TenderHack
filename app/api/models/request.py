@@ -22,6 +22,7 @@ class Request(Model):
         select_field_options.append(('6', 'Мебель'))
         select_field_options.append(('7', 'Офисные принадлежности'))
         select_field_options.append(('8', 'Продукты питания'))
+        select_field_options.append(('9', 'Обувь'))
         return select_field_options
 
     class Meta:
