@@ -1,4 +1,4 @@
-from flask import redirect
+from flask import redirect, render_template
 from flask_wtf import FlaskForm
 
 from app.api.controllers.base import BaseController

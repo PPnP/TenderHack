@@ -28,8 +28,12 @@
                 {{ form.delivery_date(type="date") }}
             </div>
             <div>
-                <p>6. Адрес доставки</p>
-                {{ form.address }}
+                <p>6. Регион доставки</p>
+                {{ form.city }}
             </div>
         </div>
-        {{ form.notes }} {{ form.submit }}</form> {% endblock content %}
+        {{ form.notes }}
+        {{ form.submit }}
+    </form>
+
+    {% endblock content %}
