@@ -31,7 +31,9 @@
 
         document.addEventListener("click", () => {
             popup.classList.add("region-popup_visible")
-            document.querySelector("img").classList.add("blurred")
+            document.querySelectorAll("img").forEach(element => {
+                element.classList.add("blurred")
+            })
         })
     </script>
 </body>
