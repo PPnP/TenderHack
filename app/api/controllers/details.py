@@ -17,7 +17,7 @@ class DetailsController(MethodView):
     def post(self, id):
         form = JoinForm()
         if form.validate():
-            c = Customer.create(location=form.address)
+            c = Customer.create(location=form.region.data)
             r = Request.get(Request.id == id)
             CustomerRequest.create(customer=c, request=r)
             return redirect('/')

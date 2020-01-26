@@ -1,9 +1,14 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %}
+
+{% block head %}
 <title>Создание заявки | PPnP</title>
-{% endblock head %} {% block content %}
+{% endblock head %}
+
+{% block content %}
 <section class="content wrapper">
     <h1 class="section-header">Создать заявку</h1>
-    <form class="create-request" method="post" action="{{ action}}">
+    <form class="create-request" method="post" action="{{ action }}">
+        {{ form.hidden_tag() }}
         <div class="create-request__column">
             <div>
                 <p>1. Категория товара</p>
@@ -29,11 +34,15 @@
             </div>
             <div>
                 <p>6. Регион доставки</p>
-                {{ form.city }}
+                {{ form.region }}
             </div>
         </div>
-        {{ form.notes }}
+        <div>
+            <p>7. Примечания</p>
+            {{ form.notes }}
+        </div>
         {{ form.submit }}
     </form>
+</section>
 
-    {% endblock content %}
+{% endblock content %}

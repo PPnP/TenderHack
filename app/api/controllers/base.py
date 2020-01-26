@@ -10,7 +10,7 @@ class BaseController(MethodView):
             return self.process(form)
         for error in list(form.errors.values()):
             flash(error[0])
-        return render_template(self.action[1:] + '.html', form=form, action=self.action)
+        raise NotImplementedError('Form is invalid')
 
     def get_form(self) -> FlaskForm:
         raise NotImplementedError('Specify the form')

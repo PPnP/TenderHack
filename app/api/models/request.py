@@ -14,17 +14,17 @@ class Request(Model):
     @staticmethod
     def get_all_categories():
         select_field_options = list()
-        select_field_options.append(('1', 'Канцелярия'))
-        select_field_options.append(('2', 'Спорт'))
-        select_field_options.append(('3', 'Учебники'))
-        select_field_options.append(('4', 'Медикаменты'))
-        select_field_options.append(('5', 'Инструменты'))
-        select_field_options.append(('6', 'Мебель'))
-        select_field_options.append(('7', 'Офисные принадлежности'))
-        select_field_options.append(('8', 'Продукты питания'))
-        select_field_options.append(('9', 'Обувь'))
-        select_field_options.append(('10', 'Бытовая техника'))
-        select_field_options.append(('11', 'Развлечения'))
+        select_field_options.append(('Канцелярия', 'Канцелярия'))
+        select_field_options.append(('Спорт', 'Спорт'))
+        select_field_options.append(('Учебники', 'Учебники'))
+        select_field_options.append(('Медикаменты', 'Медикаменты'))
+        select_field_options.append(('Инструменты', 'Инструменты'))
+        select_field_options.append(('Мебель', 'Мебель'))
+        select_field_options.append(('Офисные принадлежности', 'Офисные принадлежности'))
+        select_field_options.append(('Продукты питания', 'Продукты питания'))
+        select_field_options.append(('Обувь', 'Обувь'))
+        select_field_options.append(('Бытовая техника', 'Бытовая техника'))
+        select_field_options.append(('Развлечения', 'Развлечения'))
         return select_field_options
 
     class Meta:
