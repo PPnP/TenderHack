@@ -43,6 +43,15 @@ r9 = Request.create(category='Канцелярия', goods='Степлер', pic
 r10 = Request.create(category='Канцелярия', goods='Степлер', picture='stepler3.jpeg', quantity=6,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=2),
                     delivery_date=datetime.date.today() + datetime.timedelta(days=5))
+r11 = Request.create(category='Спорт', goods='Мяч футбольный', picture='', quantity=2,
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
+r12 = Request.create(category='Спорт', goods='Коньки', picture='', quantity=5,
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
+r13 = Request.create(category='Спорт', goods='Клюшка', picture='', quantity=7,
+                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
 
 c1 = Customer.create(name='Stepan Denisov', region='Moscow', address='15-я Парковая, 16к3')
 c2 = Customer.create(name='Pavel Krylov', region='Moscow', address='Широкая, 8')
