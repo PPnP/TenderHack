@@ -789,6 +789,29 @@ textarea {
     display: none
 }
 
+.region-popup {
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 4rem;
+    display: none;
+    z-index: 2
+}
+
+img.blurred {
+    filter: blur(10px) brightness(.9)
+}
+
+.region-popup_visible {
+    display: block
+}
+
+.region-popup__label {
+    margin: .5rem 0
+}
+
 /*
      __  __ ______ _____ _____          
     |  \/  |  ____|  __ \_   _|   /\    

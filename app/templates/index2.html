@@ -15,9 +15,21 @@
     <img src="{{ url_for('static', filename='images/portal_1.png') }}" class="fake_portal">
     <img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake_portal">
     <img src="{{ url_for('static', filename='images/portal_3.png') }}" class="fake_portal">
+    <form class="region-popup region-popup_hidden" action="/search/0">
+        <p class="region-popup__label">Регион поставки</p>
+        <input type="text" placeholder="Москва" required>
+        <p class="region-popup__label">Контрольный срок формирования</p class="region-popup__label">
+        <input type="date" required>
+        <p class="region-popup__label">Количество</p class="region-popup__label">
+        <input type="number" min=0 value=1 required><br><br>
+        <input type="submit" class="button send-request" value="Найти предложения">
+        </form>
     <script>
-        document.addEventListener("click", (e) => {
-            location.href = "/search/0"
+        const popup = document.querySelector(".region-popup")
+
+        document.addEventListener("click", () => {
+            popup.classList.add("region-popup_visible")
+            document.querySelector("img").classList.add("blurred")
         })
     </script>
 </body>
