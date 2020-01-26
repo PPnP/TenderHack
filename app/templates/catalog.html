@@ -10,11 +10,25 @@
             <article class="request">
                 <div class="request__info">
                     <h3>{{ request.goods }}</h3>
-                    <p>Срок ожидания: <time datetime="{{ request.waiting_period }}">{{ request.waiting_period }}</time> д.</p>
-                    <p>Дата доставки: {{ request.delivery_date.day }} {{ request.delivery_date.month }}</p>
-                    <a href="/details/{{ request.id }}" class="body-link">Подробнее</a>
+                    <p>
+                        Срок ожидания:
+                        <time datetime="{{ request.waiting_period }}"
+                            >{{ request.waiting_period }}</time
+                        >
+                        д.
+                    </p>
+                    <p>
+                        Дата доставки: {{ request.delivery_date.day }} {{
+                        request.delivery_date.month }}
+                    </p>
+                    <a href="/details/{{ request.id }}" class="body-link"
+                        >Подробнее</a
+                    >
                 </div>
-                <img class="request__preview" src="{{ url_for('static', filename='images/' + request.picture) }}">
+                <img
+                    class="request__preview"
+                    src="{{ url_for('static', filename='images/' + request.picture) }}"
+                />
             </article>
 
             {% endfor %}
@@ -27,15 +41,15 @@
                     {% for category in categories %}
                     <option>{{ category[1] }}</option>
                     {% endfor %}
-                  </select>
+                </select>
             </div>
             <div class="filters__filter">
                 <p>Срок ожидания</p>
-                <input type="date">
+                <input type="date" />
             </div>
             <div class="filters__filter">
                 <p>Срок доставки</p>
-                <input type="date">
+                <input type="date" />
             </div>
             <div class="filters__filter">
                 <a href="/completed" class="body-link">Показать завершенные</a>
