@@ -45,7 +45,7 @@ c4 = Customer.create(name='Matvey Kottsov', location='Покровский бу�
 c5 = Customer.create(name='Ivan Ivanov', location='Академика Скрябина, 26к1')
 c6 = Customer.create(name='Petr Parker', location='Большая Грузинская, 12с2')
 c7 = Customer.create(name='John Deplhi', location='Маршала Жукова, 28')
-с8 = Customer.create(name='Ilya Titkov', location='Мякининская, 46')
+c8 = Customer.create(name='Ilya Titkov', location='Мякининская, 46')
 
 CustomerRequest.create(customer=c1, request=r1)
 CustomerRequest.create(customer=c2, request=r2)
