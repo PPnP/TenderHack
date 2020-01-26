@@ -1,11 +1,63 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block head %}
+<title>Поиск | PPnP</title>
+{% endblock head %} {% block content %}
+<section class="content">
+    <h1 class="section-header wrapper">Результаты поиска</h1>
+    <div class="wrapper">
+        <div class="search-spinner">
+            <div class="sk-fading-circle">
+                <div class="sk-circle1 sk-circle"></div>
+                <div class="sk-circle2 sk-circle"></div>
+                <div class="sk-circle3 sk-circle"></div>
+                <div class="sk-circle4 sk-circle"></div>
+                <div class="sk-circle5 sk-circle"></div>
+                <div class="sk-circle6 sk-circle"></div>
+                <div class="sk-circle7 sk-circle"></div>
+                <div class="sk-circle8 sk-circle"></div>
+                <div class="sk-circle9 sk-circle"></div>
+                <div class="sk-circle10 sk-circle"></div>
+                <div class="sk-circle11 sk-circle"></div>
+                <div class="sk-circle12 sk-circle"></div>
+              </div>
+              <h3 class="search-spinner__label">Поиск...</h3>
+        </div>
+        <div class="articles-gallery articles-gallery_hidden">
+            {% for request in requests %}
 
-{% block head %}
-    <title>Поиск | PPnP</title>
-{% endblock head %}
+            <article class="request">
+                <div class="request__info">
+                    <h3>{{ request.goods }}</h3>
+                    <p>
+                        Срок ожидания:
+                        <time datetime="{{ request.waiting_period }}"
+                            >{{ request.waiting_period }}</time
+                        >
+                        д.
+                    </p>
+                    <p>
+                        Дата доставки: {{ request.delivery_date.day }} {{
+                        request.delivery_date.month }}
+                    </p>
+                    <a href="/details/{{ request.id }}" class="body-link"
+                        >Подробнее</a
+                    >
+                </div>
+                <img
+                    class="request__preview"
+                    src="{{ url_for('static', filename='images/' + request.picture) }}"
+                />
+            </article>
 
-{% block content %}
-    <h1>Здесь поиск подходящих заявок</h1>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.querySelector(".search-spinner").classList.add("search-spinner_hidden")
+        document.querySelector(".articles-gallery").classList.remove("articles-gallery_hidden")
+    }, 3000);
+})
+</script>
 {% endblock content %}
-
-
