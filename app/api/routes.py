@@ -4,7 +4,7 @@ api = Blueprint('api', __name__, template_folder='../templates', static_folder='
 
 
 from app.api.controllers.index import IndexPageController
-api.add_url_rule('/', view_func=IndexPageController.as_view('IndexPage'))
+api.add_url_rule('/<string:flag>', view_func=IndexPageController.as_view('IndexPage'))
 
 from app.api.controllers.search_engine import SearchEngineController
 api.add_url_rule('/search/<string:flag>', view_func=SearchEngineController.as_view('SearchEngine'))
