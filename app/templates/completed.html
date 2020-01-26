@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Завершённые | PPnP</title>
+{% endblock head %}
+
+{% block content %}
+    <h1>Здесь таблица завершённых заявок</h1>
+    {% for request in requests %}
+        {{ request.goods }}
+    {% endfor %}
+{% endblock content %}
+
+

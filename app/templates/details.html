@@ -6,4 +6,13 @@
 
 {% block content %}
     <h1>Здесь подробное инфо о заявке</h1>
+
+    {{ request.goods }}
+    <form method="post" action="{{ action }}">
+        {{ form.hidden_tag() }}
+        {{ form.region }}
+        {{ form.submit }}
+    </form>
 {% endblock content %}
+
+

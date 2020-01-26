@@ -24,10 +24,10 @@ r3 = Request.create(category='Быт', goods='Кофемашина', picture='co
                     delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
 r4 = Request.create(category='Обувь', goods='Yeezy Boost', picture='yeezy.webp', quantity=2,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=2),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=5), notes='')
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5), notes='', is_completed=True)
 r5 = Request.create(category='Бытовая техника', goods='Шуруповёрт', picture='screwdriver.jpg', quantity=4,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=3),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='', is_completed=True)
 r6 = Request.create(category='Развлечения', goods='Кубик Рубика', picture='cube.jpg', quantity=4,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=5),
                     delivery_date=datetime.date.today() + datetime.timedelta(days=7), notes='')

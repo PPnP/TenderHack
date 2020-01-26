@@ -14,3 +14,6 @@ api.add_url_rule('/create', view_func=CreateRequestController.as_view('CreateReq
 
 from app.api.controllers.details import DetailsController
 api.add_url_rule('/details/<string:id>', view_func=DetailsController.as_view('Details'))
+
+from app.api.controllers.completed import CompletedController
+api.add_url_rule('/completed', view_func=CompletedController.as_view('Completed'))

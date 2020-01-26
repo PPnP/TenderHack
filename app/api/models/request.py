@@ -10,6 +10,7 @@ class Request(Model):
     waiting_period = DateTimeField()
     delivery_date = DateTimeField()
     notes = TextField(null=True, default='')
+    is_completed = BooleanField(default=False)
 
     @staticmethod
     def get_all_categories():
