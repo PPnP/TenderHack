@@ -1,10 +1,6 @@
-{% extends "base.html" %}
-
-{% block head %}
+{% extends "base.html" %} {% block head %}
 <title>Создание заявки | PPnP</title>
-{% endblock head %}
-
-{% block content %}
+{% endblock head %} {% block content %}
 <section class="content wrapper">
     <h1 class="section-header">Создать заявку</h1>
     <form class="create-request" method="post" action="{{ action }}">
@@ -16,14 +12,12 @@
             </div>
             <div>
                 <p>2. Название товара</p>
-                {{ form.goods }}
+                {{ form.goods(placeholder="Бумага для офисной техники SvetoCopy") }}
             </div>
             <div>
                 <p>3. Количество</p>
-                {{ form.quantity }}
+                {{ form.quantity(type="number", min=0, value=1) }}
             </div>
-        </div>
-        <div class="create-request__column">
             <div>
                 <p>4. Срок ожидания</p>
                 {{ form.waiting_period(type="date") }}
@@ -34,14 +28,17 @@
             </div>
             <div>
                 <p>6. Регион доставки</p>
-                {{ form.region }}
+                {{ form.region(placeholder="Москва") }}
             </div>
         </div>
-        <div>
-            <p>7. Примечания</p>
-            {{ form.notes }}
+        <div class="create-request__column">
+            <div>
+                <p>7. Примечания</p>
+                {{ form.notes(class="create-notes") }}
+            </div>
         </div>
-        {{ form.submit }}
+
+        {{ form.submit(class="button", value="Создать заявку") }}
     </form>
 </section>
 

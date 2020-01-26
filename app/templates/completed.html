@@ -1,14 +1,25 @@
-{% extends "base.html" %}
-
-{% block head %}
-    <title>Завершённые | PPnP</title>
-{% endblock head %}
-
-{% block content %}
-    <h1>Здесь таблица завершённых заявок</h1>
-    {% for request in requests %}
-        {{ request.goods }}
-    {% endfor %}
+{% extends "base.html" %} {% block head %}
+<title>Завершённые | PPnP</title>
+{% endblock head %} {% block content %}
+<section class="content wrapper">
+    <h1 class="section-header">Список завершенных заявок</h1>
+    <table class="completed-table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Лот</td>
+                <td>Категория</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %} {% if request.is_completed %}
+            <tr>
+                <td>{{ request.id }}</td>
+                <td>{{ request.goods }}</td>
+                <td>{{ request.category }}</td>
+            </tr>
+            {% endif %} {% endfor %}
+        </tbody>
+    </table>
+</section>
 {% endblock content %}
-
-
