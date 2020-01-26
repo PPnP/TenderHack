@@ -24,4 +24,5 @@ api.add_url_rule('/completed', view_func=CompletedController.as_view('Completed'
 from app.api.controllers.catalog_list import CatalogListController
 api.add_url_rule('/catalog_list', view_func=CatalogListController.as_view('CatalogList'))
 
-
+from app.api.controllers.supplier import SupplierController
+api.add_url_rule('/supplier', view_func=SupplierController.as_view('Supplier'))
