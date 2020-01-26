@@ -4,7 +4,8 @@ from app.api.models import *
 class Customer(Model):
     id = AutoField()
     name = TextField(default='Arkasha')
-    location = TextField()
+    region = TextField()
+    address = TextField()
 
     class Meta:
         database = db

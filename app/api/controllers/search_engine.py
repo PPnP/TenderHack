@@ -11,21 +11,22 @@ class SearchEngineController(MethodView):
             query = Request.select()
             requests = list()
             for q in query:
-                months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-                          'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
-                requests.append({
-                    'id': q.id,
-                    'category': q.category,
-                    'goods': q.goods,
-                    'picture': q.picture,
-                    'quantity': q.quantity,
-                    'waiting_period': q.waiting_period.day - datetime.today().day,
-                    'delivery_date': {
-                        'day': q.delivery_date.day,
-                        'month': months[q.delivery_date.month - 1],
-                    },
-                    'notes': q.notes
-                })
+                if q.goods == 'Степлер':
+                    months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                              'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+                    requests.append({
+                        'id': q.id,
+                        'category': q.category,
+                        'goods': q.goods,
+                        'picture': q.picture,
+                        'quantity': q.quantity,
+                        'waiting_period': q.waiting_period.day - datetime.today().day,
+                        'delivery_date': {
+                            'day': q.delivery_date.day,
+                            'month': months[q.delivery_date.month - 1],
+                        },
+                        'notes': q.notes
+                    })
             return render_template('search.html', flag=1, requests=requests)
         else:
             return render_template('search.html', flag=0)
