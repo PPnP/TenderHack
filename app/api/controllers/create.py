@@ -27,6 +27,6 @@ class CreateRequestController(BaseController):
         delivery_date = datetime(year=year, month=month, day=day)
         r = Request.create(category=form.category.data, goods=form.goods.data, quantity=form.quantity.data,
                            waiting_period=waiting_period, delivery_date=delivery_date)
-        c = Customer.create(location=form.region.data)
+        c = Customer.create(address=form.region.data)
         CustomerRequest.create(customer=c, request=r)
         return render_template('success.html')
