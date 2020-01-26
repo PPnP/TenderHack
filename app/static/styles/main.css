@@ -785,6 +785,10 @@ textarea {
     background: #e94b46;
 }
 
+.not-found_hidden {
+    display: none
+}
+
 /*
      __  __ ______ _____ _____          
     |  \/  |  ____|  __ \_   _|   /\    
@@ -822,7 +826,7 @@ textarea {
     }
 
     .good-info {
-        margin-top: 8rem;
+        margin-top: 10rem;
     }
 
     .good-info__remaining {

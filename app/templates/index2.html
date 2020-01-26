@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <title>Главная | PPnP</title>
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='images/portal_1.png') }}" class="fake_portal">
+    <img src="{{ url_for('static', filename='images/portal_2.png') }}" class="fake_portal">
+    <img src="{{ url_for('static', filename='images/portal_3.png') }}" class="fake_portal">
+    <script>
+        document.addEventListener("click", (e) => {
+            location.href = "/search/0"
+        })
+    </script>
+</body>
+
+</html>
