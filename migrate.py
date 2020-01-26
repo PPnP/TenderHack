@@ -39,19 +39,10 @@ r8 = Request.create(category='Бытовая техника', goods='Мульт�
                     delivery_date=datetime.date.today() + datetime.timedelta(days=7), is_completed=True)
 r9 = Request.create(category='Канцелярия', goods='Степлер', picture='stepler2.jpg', quantity=9,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=4),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=9))
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=9), is_completed=True)
 r10 = Request.create(category='Канцелярия', goods='Степлер', picture='stepler3.jpeg', quantity=6,
                     waiting_period=datetime.date.today() + datetime.timedelta(days=2),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
-r11 = Request.create(category='Спорт', goods='Мяч футбольный', picture='', quantity=2,
-                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
-r12 = Request.create(category='Спорт', goods='Коньки', picture='', quantity=5,
-                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
-r13 = Request.create(category='Спорт', goods='Клюшка', picture='', quantity=7,
-                    waiting_period=datetime.date.today() + datetime.timedelta(days=2),
-                    delivery_date=datetime.date.today() + datetime.timedelta(days=5))
+                    delivery_date=datetime.date.today() + datetime.timedelta(days=5), is_completed=True)
 
 c1 = Customer.create(name='Stepan Denisov', region='Moscow', address='15-я Парковая, 16к3')
 c2 = Customer.create(name='Pavel Krylov', region='Moscow', address='Широкая, 8')
@@ -61,8 +52,8 @@ c5 = Customer.create(name='Ivan Ivanov', region='Moscow', address='Академ�
 c6 = Customer.create(name='Petr Parker', region='Moscow', address='Большая Грузинская, 12с2')
 c7 = Customer.create(name='John the Baptist', region='Moscow', address='Маршала Жукова, 28')
 c8 = Customer.create(name='Alex Ovechkin', region='Moscow', address='Мякининская, 46')
-c9 = Customer.create(name='Lol Kek', region='Moscow', address='Мякининская, 46')
-c10 = Customer.create(name='Ilon Mask', region='Moscow', address='Мякининская, 46')
+c9 = Customer.create(name='Lol Kek', region='Moscow', address='Улица, дом')
+c10 = Customer.create(name='Ilon Mask', region='Moscow', address='Город улица, дом')
 
 CustomerRequest.create(customer=c1, request=r1)
 CustomerRequest.create(customer=c2, request=r2)
