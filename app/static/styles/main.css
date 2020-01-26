@@ -499,6 +499,11 @@
         .good-info__main {
             grid-template-columns: 1fr;
         }
+        .join-request {
+            bottom: 0;
+            top: auto;
+            width: 100%
+        }
     }
     
     @media screen and (max-width: 700px) {
