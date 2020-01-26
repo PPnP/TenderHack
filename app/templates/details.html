@@ -1,18 +1,85 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block head %}
+<title>Детали | PPnP</title>
+{% endblock head %} {% block content %}
+<div class="content">
+    <div class="section-header wrapper">
+        <h1>Заявка</h1>
+        <br />
+        <h3>{{ request.category }}</h3>
+    </div>
+    <div class="good-info wrapper wrapper_expandable">
+        <div class="good-info__remaining">
+            <h2>Осталось {{ request.waiting_period }} дней!</h2>
+        </div>
+        <div class="good-info__main">
+            <img
+                src="{{ url_for('static', filename='images/' + request.picture) }}"
+            />
+            <div class="good-info__description">
+                <h2 class="accent">{{ request.goods }}</h2>
+                <p>Категория: {{ request.category }}</p>
+                <p>Бренд: Commix</p>
+                <p>
+                    Заказано: {{ request.quantity }} шт. в этой заявке
+                    <br />Осталось: 400 шт. на складе
+                </p>
+                <p>Размер скоб: 24/6, 24/8, 26/6</p>
+                <p>{{ request.notes }}</p>
+                <br />
+                <h3 class="accent">
+                    < 1500 рублей
+                </h3>
+                <p class="good-info__price">за штуку</p>
+            </div>
+            <div class="good-info__activity">
+                <h2 class="accent">37 участников</h2>
+                <p>присоединилось к этой заявке</p>
+                <br />
+                <button class="button join-request-preshow">
+                    Присоединиться
+                </button>
+            </div>
+            <form method="post" action="{{ action }}" class="join-request">
+                <a class="join-request__close">✖</a>
+                <p class="join-request__label">Просто укажите ваш адрес:</p>
+                {{ form.hidden_tag() }} {{
+                form.region(class="join-request__address") }} <br />{{
+                form.submit(value="Отправить", class="button") }}
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    const join_button = document.querySelector(".join-request-preshow");
+    const popup = document.querySelector(".join-request");
+    const popup_close = document.querySelector(".join-request__close");
 
-{% block head %}
-    <title>Детали | PPnP</title>
-{% endblock head %}
+    const show_popup = () => {
+        toggle_blur();
+        popup.classList.add("join-request_visible");
+    };
 
-{% block content %}
-    <h1>Здесь подробное инфо о заявке</h1>
+    const toggle_blur = () => {
+        let to_blur = `
+            .top-menu,
+            .section-header,
+            .good-info__main div, 
+            .good-info__main img,
+            .good-info__remaining
+        `;
 
-    {{ request.goods }}
-    <form method="post" action="{{ action }}">
-        {{ form.hidden_tag() }}
-        {{ form.region }}
-        {{ form.submit }}
-    </form>
+        to_blur = document.querySelectorAll(to_blur);
+        to_blur.forEach(element => {
+            element.classList.toggle("blurred");
+        });
+    };
+
+    const close_popup = () => {
+        toggle_blur();
+        popup.classList.remove("join-request_visible");
+    };
+
+    join_button.addEventListener("click", show_popup);
+    popup_close.addEventListener("click", close_popup);
+</script>
 {% endblock content %}
-
-

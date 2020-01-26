@@ -20,3 +20,6 @@ api.add_url_rule('/details/<string:id>', view_func=DetailsController.as_view('De
 
 from app.api.controllers.completed import CompletedController
 api.add_url_rule('/completed', view_func=CompletedController.as_view('Completed'))
+
+from app.api.controllers.catalog_list import CatalogListController
+api.add_url_rule('/catalog_list', view_func=CatalogListController.as_view('CatalogList'))
