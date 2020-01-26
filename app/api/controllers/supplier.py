@@ -25,7 +25,7 @@ class SupplierController(MethodView):
                 'address': 'Ломоносовский, 16'
             },
             {
-                'id': '3',
+                'id': '4',
                 'name': 'ЛИТ 1533',
                 'address': 'Ломоносовский, 16'
             }
