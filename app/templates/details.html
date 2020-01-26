@@ -8,7 +8,7 @@
     </div>
     <div class="good-info wrapper wrapper_expandable">
         <div class="good-info__remaining">
-            <h2>Осталось 5 дней!</h2>
+            <h2>Осталось {{ request.waiting_period }} дней!</h2>
         </div>
         <div class="good-info__main">
             <img src="{{ url_for('static', filename='images/' + request.picture) }}">

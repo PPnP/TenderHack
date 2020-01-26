@@ -23,7 +23,7 @@
             <a href="/create">
             + создать заявку
         </a>
-            <button class="button button_catalog"><img src="{{ url_for('static', filename='images/burger.svg') }}">каталог</button>
+            <a href="/catalog_list" class="button button_catalog"><img src="{{ url_for('static', filename='images/burger.svg') }}">каталог</a>
         </div>
     </div>
     {% block content %}{% endblock content %}
