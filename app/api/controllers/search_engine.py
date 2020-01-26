@@ -1,8 +1,5 @@
 from flask.views import MethodView
 from flask import render_template
-from datetime import datetime
-
-from app.api.models.request import Request
 
 
 class SearchEngineController(MethodView):
