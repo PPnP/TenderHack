@@ -9,7 +9,58 @@
       <h3>
         Ничего похожего не нашлось. Но вы можете <a href="/catalog" class="body-link">посмотреть похожие предложения</a>
         или <a href="/create" class="body-link">создать свою заявку</a>.
-      </h3>
+      </h3><br>
+      <h2 class="accent">Похожие предложения</h2><br>
+      <div class="articles-gallery">
+        <article class="request">
+          <div class="request__info">
+            <h3>Шайба 5 см</h3>
+            <p>
+              Срок ожидания: 4 д.
+            </p>
+            <p>
+              Дата доставки: 24 февраля
+            </p>
+            <a href="/details/1" class="body-link">Подробнее</a>
+          </div>
+          <img
+            class="request__preview"
+            src="{{ url_for('static', filename='images/shayba_similar1.png') }}"
+          />
+        </article>
+        <article class="request">
+          <div class="request__info">
+            <h3>Шайба 6 см</h3>
+            <p>
+              Срок ожидания: 6 д.
+            </p>
+            <p>
+              Дата доставки: 26 февраля
+            </p>
+            <a href="/details/1" class="body-link">Подробнее</a>
+          </div>
+          <img
+            class="request__preview"
+            src="{{ url_for('static', filename='images/shayba_similar2.png') }}"
+          />
+        </article>
+        <article class="request">
+          <div class="request__info">
+            <h3>Шайба утяжеленная</h3>
+            <p>
+              Срок ожидания: 10 д.
+            </p>
+            <p>
+              Дата доставки: 2 марта
+            </p>
+            <a href="/details/1" class="body-link">Подробнее</a>
+          </div>
+          <img
+            class="request__preview"
+            src="{{ url_for('static', filename='images/shayba_similar3.png') }}"
+          />
+        </article>
+      </div>
     </div>
   </div>
   <div class="wrapper">
