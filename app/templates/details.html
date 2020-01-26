@@ -38,7 +38,7 @@
                     Присоединиться
                 </button>
             </div>
-            <form method="post" action="{{ action }}" class="join-request">
+            <form method="post" action="" onsubmit="location.href='/catalog';return false;" class="join-request">
                 <a class="join-request__close">✖</a>
                 <p class="join-request__label">Просто укажите ваш адрес:</p>
                 {{ form.hidden_tag() }} {{
