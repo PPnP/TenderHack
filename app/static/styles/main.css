@@ -753,7 +753,7 @@ textarea {
 }
 
 .completed-table td {
-    padding: 1.5rem 2rem;
+    padding: .75rem 2rem;
 }
 
 .catalog-list {
@@ -810,6 +810,17 @@ img.blurred {
 
 .region-popup__label {
     margin: .5rem 0
+}
+
+.logistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem
+}
+
+.logistics__note {
+    margin-top: .5rem
 }
 
 /*

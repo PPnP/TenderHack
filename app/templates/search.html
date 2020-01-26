@@ -7,8 +7,8 @@
     <div class="not-found not-found_hidden">
       <br />
       <h3>
-        Ничего похожего не нашлось. Но вы можете посмотреть похожие предложения
-        или создать свою заявку
+        Ничего похожего не нашлось. Но вы можете <a href="/catalog" class="body-link">посмотреть похожие предложения</a>
+        или <a href="/create" class="body-link">создать свою заявку</a>.
       </h3>
     </div>
   </div>
@@ -76,12 +76,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
-        document
-          .querySelector(".search-spinner")
-          .classList.add("search-spinner_hidden");
-        document
-          .querySelector(".articles-gallery")
-          .classList.remove("articles-gallery_hidden");
+        location.href = "/details/1"
       }, 3000);
     });
   </script>

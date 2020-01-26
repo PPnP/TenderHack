@@ -26,8 +26,18 @@ class SupplierController(MethodView):
             },
             {
                 'id': '4',
-                'name': 'ЛИТ 1533',
-                'address': 'Ломоносовский, 16'
+                'name': 'ЛИТ 1533 Библиотека',
+                'address': 'Ломоносовский, 18'
+            },
+            {
+                'id': '5',
+                'name': 'ДИТ г. Москвы',
+                'address': 'Новая Басманная ул., 10 стр.1'
+            },
+            {
+                'id': '6',
+                'name': 'ООО ППнП Тех',
+                'address': 'Красная площадь'
             }
         ]
         return render_template('supplier.html', customers=customers)

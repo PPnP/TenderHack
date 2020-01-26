@@ -1,9 +1,37 @@
-{% extends "base.html" %}
-
-{% block head %}
-    <title>Кабинет поставщика | PPnP</title>
-{% endblock head %}
-
-{% block content %}
-
+{% extends "base.html" %} {% block head %}
+<title>Кабинет поставщика | PPnP</title>
+{% endblock head %} {% block content %}
+<div class="content">
+  <div class="section-header wrapper">
+    <h1>
+      Совместная закупка №1533<br /><span class="accent"
+        >Кабинет поставщика</span
+      >
+    </h1>
+  </div>
+  <div class="wrapper">
+    <table class="completed-table">
+      <thead>
+        <tr>
+          <td>№ Контракта</td>
+          <td>Заказчик</td>
+          <td>Адрес поставки</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for customer in customers %}
+        <tr>
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.address }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="logistics">
+      <button class="button">Логистика</button>
+      <p class="logistics__note">Нажмите для построения эффективного маршрута</p>
+    </div>
+  </div>
+</div>
 {% endblock content %}
